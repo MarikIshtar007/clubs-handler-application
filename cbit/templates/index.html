@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+
+{% block heading %}
+<h1 style="text-underline-position: auto;">The Admins Login Page</h1>
+{% endblock%}
+
+{% block body %}
+	<div class="modal-body row">
+  <div class="col-md-5">
+
+	<div class="container" style="margin: auto; width: 40%; margin-top: 100px;">
+		<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Super-Admin Login</h5>
+    <form action =" {{url_for('super_admin')}}" method="post">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Name</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter name" name="name">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="pword">
+  </div>
+  <button type="submit" class="btn btn-primary">Login</button>
+</form>
+  </div>
+</div>
+    
+  </div>
+</div>
+
+  <div class="col-md-2">
+  	<span style="display: inline-block;
+        border-left: 1px solid #ccc;
+        margin: 0 10px;
+        height: 525px;"></span>
+  </div>
+  <div class="col-md-5">
+  	<div class="container" style="margin: auto; width: 70%; margin-top: 100px;">
+		<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Admin Login</h5>
+    <form action =" {{url_for('admin')}}" method="post">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Name</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter name" name="name">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="pword">
+  </div>
+  <button type="submit" class="btn btn-primary">Login</button>
+</form>
+  </div>
+</div>
+</div>
+</div>
+</div>
+
+{% endblock %}
